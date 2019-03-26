@@ -14,14 +14,14 @@ public class DeleteServlet extends HttpServlet {
 	/**
 	 * Constructor of the object.
 	 */
-	public DeleteServlet() {
+public DeleteServlet() {
 		super();
 	}
 
 	/**
 	 * Destruction of the servlet. <br>
 	 */
-	public void destroy() {
+public void destroy() {
 		super.destroy(); // Just puts "destroy" string in log
 		// Put your code here
 	}
@@ -36,7 +36,7 @@ public class DeleteServlet extends HttpServlet {
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
 	 */
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
+public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String idStr = request.getParameter("id");
 		int id = Integer.parseInt(idStr);
