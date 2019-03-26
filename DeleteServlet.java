@@ -42,14 +42,14 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 		int id = Integer.parseInt(idStr);
 		
 		ServletContext application = this.getServletContext();
-		UserManagerBean userManager = (UserManagerBean)application.getAttribute("userManager");
+		         UserManagerBean userManager = (UserManagerBean)application.getAttribute("userManager");
 		if(userManager==null) {
 			userManager = new UserManagerHbnBean();
 			application.setAttribute("userManager", userManager);
 		}
 		
 		userManager.delete(id);
-		response.sendRedirect("../main.jsp");
+		         response.sendRedirect("../main.jsp");
 	}
 
 	/**
@@ -69,9 +69,9 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
 		out.println("<HTML>");
-		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
+		           out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
 		out.println("  <BODY>");
-		out.print("    This is ");
+		   out.print("    This is ");
 		out.print(this.getClass());
 		out.println(", using the POST method");
 		out.println("  </BODY>");
